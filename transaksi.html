@@ -26,14 +26,14 @@ if(isset($_POST['bsimpan']))
         {
             echo "<script>
                     alert('Edit data sukses !');
-                    document.location='index.php';       
+                    document.location='transaksi.html';       
                 </script>";
         }
         else
         {
             echo "<script>
                     alert('Edit data GAGAL !');
-                    document.location='index.php';
+                    document.location='transaksi.html';
                 </script>";
         }
     }
@@ -50,14 +50,14 @@ if(isset($_POST['bsimpan']))
         {
             echo "<script>
                     alert('Simpan data sukses !');
-                    document.location='index.php';       
+                    document.location='transaksi.html';       
                 </script>";
         }
         else
         {
             echo "<script>
                     alert('Simpan data GAGAL !');
-                    document.location='index.php';
+                    document.location='transaksi.html';
                 </script>";
         }
     }
@@ -86,7 +86,7 @@ if(isset($_GET['hal']))
         if($hapus){
             echo "<script>
                     alert('Hapus Data Sukses !');
-                    document.location='index.php';
+                    document.location='transaksi.html';
                 </script>";
         }
     }
@@ -142,7 +142,7 @@ if(isset($_GET['hal']))
 
         <button type="submit" class="btn btn-success" name="bsimpan">Simpan</button>
         <button type="reset" class="btn btn-danger" name="breset">Kosongkan</button>
-        <a href="quicho_38/indeks.php" class="btn btn-secondary">Kembali</a>
+        <a href="index.html" class="btn btn-secondary">Kembali</a>
         
 
     </form>
@@ -176,8 +176,8 @@ if(isset($_GET['hal']))
             <td><?=$data['merk']?></td>
             <td><?=$data['jumlah']?></td>
             <td>
-                <a href="index.php?hal=edit&id=<?=$data['id_kpn']?>" class="btn btn-warning"> Edit </a>
-                <a href="index.php?hal=hapus&id=<?=$data['id_kpn']?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger"> Hapus </a>
+                <a href="transaksi.html?hal=edit&id=<?=$data['id_kpn']?>" class="btn btn-warning"> Edit </a>
+                <a href="transaksi.html?hal=hapus&id=<?=$data['id_kpn']?>" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')" class="btn btn-danger"> Hapus </a>
             </td>
         </tr>
         <?php endwhile; //penutup perulangan while ?>
